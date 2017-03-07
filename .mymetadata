@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="foodbighomework"
+  id="myeclipse.1484221330239"
+  context-root="/foodbighomework"
+  j2ee-spec="5.0"
+  archive="foodbighomework.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

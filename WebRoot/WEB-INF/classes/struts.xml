@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="gbk"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />   
+       
+          
+	 <package name="food" namespace="/food" extends="struts-default"><!-- 不要乱改  “/”指的是根目录底下 -->
+	        <action name="food_*" class="foodAction" method="{1}"><!-- 1指代的第一个*的位置 -->
+	        	<result name="message">/message.jsp</result>  
+	        	<result name="show_view">/main.jsp</result>        
+	        	<result name="detail_view">/detail.jsp</result>   
+	        	<result name="edit_view">/edit.jsp</result>        
+	        	<result name="delete_message">/delete_message.jsp</result> 
+	        	<result name="edit_message">/edit_message.jsp</result>     
+	        </action>  
+	 </package>
+	 
+	 <package name="customer" namespace="/customer" extends="struts-default"><!-- 不要乱改 -->
+	        <action name="customer_*" class="customerAction" method="{1}">
+	        
+	        <!--class="customerAction",这个 controller(value c)则class=“c”  考试！！！！-->
+                   <result name="reg_success">/reg_success.jsp</result>  
+            
+         
+	        </action>  
+	 </package>
+	 
+	 <package name="order" namespace="/order" extends="struts-default" >
+	        <action name="order_*" class="orderAction" method="{1}">
+	            <result name="order_message">/order_message.jsp</result>
+	            <result name="show_view">/order_main.jsp</result>
+	            <result name="detail_view">/order_detail.jsp</result>
+	        </action>  
+	 </package> 
+       
+         	 
+</struts>
